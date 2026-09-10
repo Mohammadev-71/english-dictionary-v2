@@ -31,7 +31,7 @@ inputEl.addEventListener("keydown", (event)=>{
 async function getData(inputEl, resPageEl){
     try {
         resPageEl.textContent = "Loading...";
-        const data = await fetch(`https://corsproxy.io/?https://api.dictionaryapi.dev/api/v2/entries/en/${inputEl.value}`).then((resulte)=>resulte.json());        
+        const data = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(`https://api.dictionaryapi.dev/api/v2/entries/en/${inputEl.value}`).then((resulte)=>resulte.json());        
         const textOfData = `${data[0].word}:  
                             \n${data[0].phonetics[1].text}
                             \nPart of speech: ${data[0].meanings[0].partOfSpeech} 
